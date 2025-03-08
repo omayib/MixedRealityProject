@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Snow on Body - Mixed Reality Fun</title>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    video, canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+    #clearButton {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 100px;
+      height: 50px;
+      background: rgba(255,255,255,0.7);
+      border: 2px solid #000;
+      text-align: center;
+      line-height: 50px;
+      font-size: 18px;
+      user-select: none;
+      pointer-events: none;
+    }
+  </style>
+  
+</head>
+<body>
+  <video id="video" autoplay playsinline></video>
+  <canvas id="overlay"></canvas>
+  <div id="clearButton">Clear Snow</div>
+  
+  <!-- Load MediaPipe Pose and drawing utils -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.5.1635988145/drawing_utils.js"></script>
+  
+  <!-- Include the application script -->
+  <script src="app.js"></script>
+</body>
+</html>
