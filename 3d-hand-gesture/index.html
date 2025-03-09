@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mixed Reality Hand Gesture App</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+      /* Fullscreen video element */
+      #videoElement {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+      }
+      /* Canvas overlay for drawing hand landmarks */
+      #overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+      /* Three.js renderer will be appended dynamically (z-index: 3) */
+    </style>
+  </head>
+  <body>
+    <!-- Video feed from webcam -->
+    <video id="videoElement" autoplay muted playsinline></video>
+    <!-- Canvas for drawing hand landmarks -->
+    <canvas id="overlay"></canvas>
+
+    <!-- Mediapipe Hands and drawing utils -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <!-- Mediapipe Camera Utils -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <!-- Three.js for 3D rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.143.0/build/three.min.js"></script>
+    <!-- Our main app logic -->
+    <script src="apps.js"></script>
+  </body>
+</html>
