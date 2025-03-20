@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Aplikasi Pemrosesan Citra Digital Sederhana</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    #canvas {
+      border: 1px solid #ccc;
+      margin-top: 10px;
+    }
+    .channel-canvas {
+      border: 1px solid #ccc;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Aplikasi Pemrosesan Citra Digital</h1>
+  <input type="file" id="upload" accept="image/*">
+  <br><br>
+  <label for="operation">Pilih operasi:</label>
+  <select id="operation">
+    <option value="grayscale">Ubah warna RGB - Grayscale</option>
+    <option value="edgeRight">Deteksi garis kanan</option>
+    <option value="edgeTop">Deteksi garis atas</option>
+    <option value="blur">Blur</option>
+    <option value="separate">Pisahkan Kanal RGB</option>
+  </select>
+  <button id="process">Proses</button>
+  <br><br>
+  <canvas id="canvas"></canvas>
+  <!-- Kontainer untuk hasil channel terpisah -->
+  <div id="channels"></div>
+  
+  <script src="apps.js"></script>
+</body>
+</html>
