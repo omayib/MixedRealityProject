@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Aplikasi Pemrosesan Citra Digital Sederhana Part 2</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    #canvas {
+      border: 1px solid #ccc;
+      margin-top: 10px;
+    }
+    .channel-canvas {
+      border: 1px solid #ccc;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Aplikasi Pemrosesan Citra Digital Part 2</h1>
+  <input type="file" id="upload" accept="image/*">
+  <br><br>
+  <label for="operation">Pilih operasi:</label>
+  <select id="operation">
+
+     <!--  ▼  Tambahan transformasi geometri ▼ -->
+     <option disabled>──────────</option>
+     <option value="translate">Translasi (geser)</option>
+     <option value="scale">Skala</option>
+     <option value="rotate">Rotasi</option>
+     <option value="flipH">Balik horizontal</option>
+     <option value="flipV">Balik vertikal</option>
+  </select>
+  <button id="process">Proses</button>
+  <br><br>
+  <canvas id="canvas"></canvas>
+  <!-- Kontainer untuk hasil channel terpisah -->
+  <div id="channels"></div>
+  
+  <script src="apps.js"></script>
+</body>
+</html>
