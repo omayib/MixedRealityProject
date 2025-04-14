@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Corner Detection App</title>
+</head>
+<body>
+    <input type="file" id="upload">
+    <select id="algorithm">
+      <option value="harris">Harris Corner</option>
+      <option value="shi-tomasi">Shi-Tomasi Corner</option>
+    </select>
+    <button id="process">Proses</button>
+    <div id="errorMessage"></div>
+    <canvas id="output"></canvas>
+  
+    <script src="utils.js"></script>
+    <script>
+      let utils = new Utils('errorMessage');
+      utils.loadOpenCv(() => {
+          console.log('OpenCV loaded');
+          startApp(); // setelah opencv siap
+      });
+    </script>
+    <script src="apps.js"></script>
+  </body>
+  
+</html>
