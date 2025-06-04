@@ -9,7 +9,6 @@
       overflow: hidden;
       background: #222;
     }
-    /* The video element displays the webcam feed */
     #video {
       position: absolute;
       top: 0;
@@ -19,7 +18,6 @@
       z-index: 1;
       transform-origin: top left;
     }
-    /* The overlay canvas sits on top */
     #overlay {
       position: absolute;
       top: 0;
@@ -34,7 +32,6 @@
   <video id="video" autoplay muted playsinline></video>
   <canvas id="overlay"></canvas>
 
-  <!-- MediaPipe libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
