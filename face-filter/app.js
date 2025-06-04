@@ -52,6 +52,7 @@ function drawFrame(glassesImg,eyeCenterX,eyeCenterY,glassesWidth,glassesHeight,a
     glassesHeight
   );
   ctx.restore();
+
   faceapi.detectSingleFace(video, new faceapi.TinyFaceDetectorOptions())
   .withFaceLandmarks()
   .then(result => {
@@ -86,7 +87,8 @@ function drawFrame(glassesImg,eyeCenterX,eyeCenterY,glassesWidth,glassesHeight,a
     return {};
   })
   .then(detectionData => {
-    requestAnimationFrame(() => drawFrame(glassesImg, detectionData.eyeCenterX, detectionData.eyeCenterY, detectionData.glassesWidth, detectionData.glassesHeight, detectionData.angle));
+    requestAnimationFrame(() => drawFrame(glassesImg, detectionData.eyeCenterX, 
+                  detectionData.eyeCenterY, detectionData.glassesWidth, 
+                  detectionData.glassesHeight, detectionData.angle));
   });
-
 }
